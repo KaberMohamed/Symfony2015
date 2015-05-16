@@ -1,0 +1,17 @@
+qcm_salle_tp_voir_salle:
+    pattern:   /salle/{id}
+    defaults: { _controller: QcmSalleTpBundle:Salle:voirSalle }
+    
+   
+
+
+qcm_salle_tp_accueil:
+    pattern:    /
+    defaults: { _controller: QcmSalleTpBundle:Salle:index }
+
+qcm_salle_tp_ajouter_salle:
+    pattern:    /ajouterSalle
+    defaults: { _controller: QcmSalleTpBundle:Salle:ajouterSalle }
+
+
+

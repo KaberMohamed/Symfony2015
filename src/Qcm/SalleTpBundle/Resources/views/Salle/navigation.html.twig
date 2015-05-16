@@ -1,0 +1,6 @@
+{% for salle in salles %}
+- <a href="{{ path('qcm_salle_tp_voir_salle',{'id': salle.id}) }}">
+
+    {{ salle.batiment }}-{{ salle.etage }}.{{ salle.numero }}
+</a>
+{% endfor%}

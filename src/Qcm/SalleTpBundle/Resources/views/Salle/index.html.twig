@@ -1,0 +1,16 @@
+{% extends "QcmSalleTpBundle:Salle:layout.html.twig" %}
+{% block titre %}
+    Accueil -{{ parent() }}
+{% endblock %}
+{% block salleTp_contenu %}
+    <h2>Accueil</h2>
+    <p><i>page visitée {{ nbreFois }} fois.</i></p> 
+    <ul> messages : 
+        {# affichage de  message flash s'il y a #}    
+         {% for message in app.session.flashbag.get('InfoAjout') %} 
+            <li>{{ message }}</li> 
+        {% endfor %} 
+    </ul> 
+    <p>voir la salle <a href="{{ path('qcm_salle_tp_voir_salle', {'id':3 })}} "> 3</a></p> 
+    <p><a href="{{ path('qcm_salle_tp_ajouter_salle') }}">ajouter une salle </a> </p>
+{% endblock %}

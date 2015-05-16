@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+        <html>
+           <head>
+
+
+               <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+               <title> {% block titre %} Qcm - Salle de Tp{% endblock %}</title>
+           </head>
+
+                 <body>
+                 <div id="navigation">
+                     {% block navigation %}
+                         <hr/>
+                         <a href="{{ path('qcm_salle_tp_accueil') }}"> accueil</a>-
+                         {{ render(controller("QcmSalleTpBundle:Salle:navigation")) }}
+                         <hr/>
+                     {% endblock %}
+
+                 </div>
+                 <div id="contenu">
+                     <h1> Gestion des Salles de TP</h1>
+                     {% block salleTp_contenu %}
+                     {% endblock %}
+                 </div>
+                 <hr/>
+                 <div id="pied_de_page">
+                     <p> &copy; DF.</p>
+                 </div>
+                 </body>
+        </html>

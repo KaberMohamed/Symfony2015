@@ -1,0 +1,12 @@
+qcm_test:
+    resource: "@QcmTestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+qcm_salle_tp:
+    resource: "@QcmSalleTpBundle/Resources/config/routing.yml"
+    prefix:   /salleTp
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

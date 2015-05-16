@@ -1,0 +1,4 @@
+services:
+#    qcm_salle_tp.example:
+#        class: Qcm\SalleTpBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

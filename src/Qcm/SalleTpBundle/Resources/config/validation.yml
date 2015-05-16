@@ -1,0 +1,13 @@
+Qcm\SalleTpBundle\Entity\Salle:
+  properties:
+    batiment:
+      - NotBlank: { message: la valeur doit comprendre un caractere.}
+      - Length:
+          min: 1
+          max: 1
+          exactMessage: "Votre nom doit faire au plus 1  caractere"
+    etage:
+      - Regex: { pattern: "/^[0-9]$/",message: la valeur doit etre comprise entre 0 et 9.}
+    numero:
+      - Regex: "/^[0-9][0-9]$/"
+      - LessThan: { value: 80, message: valeur inferieure ou egale à 80}
