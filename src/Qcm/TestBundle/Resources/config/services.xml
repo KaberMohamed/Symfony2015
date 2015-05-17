@@ -13,4 +13,12 @@
         </service>
     </services>
     -->
+
+    <services>
+
+        <service id="GAlter_user.registration.form.type" class="Qcm\TestBundle\Form\Type\RegistrationFormType">
+            <tag name="form.type" alias="GAlter_user_registration" />
+        </service>
+
+    </services>
 </container>

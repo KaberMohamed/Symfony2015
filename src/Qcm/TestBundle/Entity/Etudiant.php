@@ -3,6 +3,7 @@
 namespace Qcm\TestBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * Etudiant
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Qcm\TestBundle\Entity\EtudiantRepository")
  */
-class Etudiant
+class Etudiant extends BaseUser
 {
 
 
@@ -25,7 +26,13 @@ class Etudiant
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
 
     /**
      * @var string
